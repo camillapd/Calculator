@@ -1,1 +1,9 @@
-Fazer TODO
+1. Fazer janela da calculadora //OK
+    1.2 Por ícone de calculadora //OK
+2. Fazer barra de menu //OK
+    2.1 Por trigger das funções do menu
+3. Fazer áera de por texto dos números //OK
+    3.1 Ajeitar área de texto para ficar igual a calculadora do windows (aumentar texto, por limite de números e por só para digitar números)
+4. Fazer botões de números e de operações
+    4.1 Por trigger nos botões que aparece números e operações
+    4.2 Fazer a parte em que faz as contas da calculadora
