@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QAction, QApplication, QGridLayout, QLineEdit, QMainWindow, QMessageBox, QPushButton
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QDoubleValidator, QIcon
 from PyQt5 import QtCore
 
 class Calculadora(QMainWindow):
@@ -17,8 +17,10 @@ class Calculadora(QMainWindow):
         self.show()
 
     def textoInterface(self):
-    
+        
+        self.so_double = QDoubleValidator()      
         self.numeros_texto = QLineEdit(self)
+        self.numeros_texto.setValidator(self.so_double)
         self.numeros_texto.move(10,30)
         self.numeros_texto.resize(190,50)
         self.numeros_texto.setMaxLength(20)
@@ -51,7 +53,7 @@ class Calculadora(QMainWindow):
         help_menu.addAction(about_act)
 
     def aboutusText(self):
-        QMessageBox.about(self, "Sobre Calculadora", "github/cammievolsci")
+        QMessageBox.about(self, "Sobre Calculadora", "github/camillapd")
 
     def criarBotoes(self):
 
@@ -99,8 +101,6 @@ class Calculadora(QMainWindow):
         button_grid.setContentsMargins(5, 5, 5, 5)
         button_grid.addWidget(clear_button,10,10,5,5)
 
-
-    
 
 def main():
     app = QApplication([])
